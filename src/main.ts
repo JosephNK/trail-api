@@ -8,6 +8,6 @@ async function bootstrap() {
   // Express의 timeout 설정 (선택사항)
   app.getHttpAdapter().getInstance().timeout = 120000; // 2분
 
-  await app.listen(process.env.PORT ?? 3000);
+  await app.listen(process.env.PORT ?? 3000, '0.0.0.0');
 }
 bootstrap();
