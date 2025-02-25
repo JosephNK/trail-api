@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { TimeoutController } from './timeout/timeout.controller';
-import { TimeoutModule } from './timeout/timeout.module';
+import { ApiController } from './api/api.controller';
+import { ApiModule } from './api/api.module';
 
 @Module({
-  imports: [TimeoutModule],
-  controllers: [AppController, TimeoutController],
+  imports: [ApiModule],
+  controllers: [AppController, ApiController],
   providers: [AppService],
 })
 export class AppModule {}

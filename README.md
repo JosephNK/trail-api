@@ -38,23 +38,17 @@ $ yarn run test:cov
 
 ## How to use
 
-Timeout
+Timeout test
+```bash
+GET http://localhost:3000/api/timeout?delay=3000
+```
 
-```js
-try {
-    console.log(`Testing API with ${timeout}ms client timeout...`);
-    
-    const response = await axios.get('http://localhost:3000/timeout', {
-      params: { delay: 5000 }, // 5초 지연 (서버측)
-      timeout: 2000, // 클라이언트 타임아웃 설정 (2초)
-    });
-    
-    console.log('Response:', response.data);
-  } catch (error) {
-    if (error.code === 'ECONNABORTED') {
-      console.error('Request timed out!');
-    } else {
-      console.error('Error:', error.message);
-    }
-  }
+404 test (force)
+```bash
+GET http://localhost:3000/api/notfound?force=true
+```
+
+404 test (resource)
+```bash
+GET http://localhost:3000/api/resources/999
 ```

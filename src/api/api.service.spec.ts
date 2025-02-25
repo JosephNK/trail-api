@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { TimeoutService } from './timeout.service';
+import { ApiService } from './api.service';
 
-describe('TimeoutService', () => {
-  let service: TimeoutService;
+describe('ApiService', () => {
+  let service: ApiService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [TimeoutService],
+      providers: [ApiService],
     }).compile();
 
-    service = module.get<TimeoutService>(TimeoutService);
+    service = module.get<ApiService>(ApiService);
   });
 
   it('should be defined', () => {

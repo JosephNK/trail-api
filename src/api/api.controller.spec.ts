@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { TimeoutController } from './timeout.controller';
+import { ApiController } from './api.controller';
 
-describe('TimeoutController', () => {
-  let controller: TimeoutController;
+describe('ApiController', () => {
+  let controller: ApiController;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      controllers: [TimeoutController],
+      controllers: [ApiController],
     }).compile();
 
-    controller = module.get<TimeoutController>(TimeoutController);
+    controller = module.get<ApiController>(ApiController);
   });
 
   it('should be defined', () => {
