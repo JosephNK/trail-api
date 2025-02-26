@@ -70,4 +70,11 @@ export class ApiController {
       message: `Resource ${id} found successfully`,
     };
   }
+
+  @Get('serializernumber')
+  simulateNumber(): { message: number } {
+    return {
+      message: 123456,
+    };
+  }
 }
